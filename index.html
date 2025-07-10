@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>21 Things I Love About You</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 500px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      position: relative;
+    }
+
+    .card {
+      display: none;
+      font-size: 1.2rem;
+      color: #444;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .card.active {
+      display: block;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      color: #e75480;
+      margin-bottom: 20px;
+    }
+
+    .nav-buttons {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      background-color: #ff69b4;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #e75480;
+    }
+
+    img.placeholder {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>21 Things I Love About You 💕</h1>
+
+    <!-- 21 cards with images -->
+    <div class="card active">
+      Reason 1: I love your eyes 👀
+    </div>
+    <div class="card">
+      Reason 2: You are always so caring 🫶
+    </div>
+    <div class="card">
+      Reason 3: Your kind and beautiful heart 🫀
+    </div>
+    <!-- Repeat for all 21 -->
+    <!-- You can copy-paste the block below to complete 21 cards -->
+
+    <div class="card">
+      Reason 4: You have a million dollar smile 😊
+    </div>
+    <div class="card">
+      Reason 5: You make me feel safe 🤗
+    </div>
+    <div class="card">
+      Reason 6: You make me laugh 😂
+    </div>
+    <div class="card">
+      Reason 7: You make me a better person everyday 🧑
+    </div>
+    <div class="card">
+      Reason 8: You are the best support system I have 🫂
+    </div>
+    <div class="card">
+      Reason 9: You are always honest with me 🥹
+    </div>
+    <div class="card">
+      Reason 10: You are the first person I think of when I wake up 🥱
+    </div>
+    <div class="card">
+      Reason 11: You are the last person I think of before I sleep 😴
+    </div>
+    <div class="card">
+      Reason 12: You never judge me for being me 🦍
+    </div>
+    <div class="card">
+      Reason 13: You are a solid partner 👩‍❤️‍👨
+    </div>
+    <div class="card">
+      Reason 14: Hotness toh Mahashallah...Itni hot ki tu barf ko ubaal de ❤️‍🔥❤️‍🔥
+    </div>
+    <div class="card">
+      Reason 15: Chinki Minki >>>>>> 😈😈
+    </div>
+    <div class="card">
+        Reason 16: You are my home 🏠
+    </div>
+    <div class="card">
+      Reason 17: My heart beat increases when I am with you 💓💓
+    </div>
+    <div class="card">
+      Reason 18: Pet mein gud gudi ki wajah hai tu 🦋🦋
+    </div>
+    <div class="card">
+      Reason 19: Your hugs >>>>>> 🫂🫂
+    </div>
+    <div class="card">
+      Reason 20: Teri Kissy >>>>>>>>>>👩‍❤️‍💋‍👨👩‍❤️‍💋‍👨
+    </div>
+    <div class="card">
+      Reason 21: Tu >>>>>>>>>>>>>>>>>>>>>❤️
+    </div>
+
+    <div class="nav-buttons">
+      <button id="prevBtn">Back</button>
+      <button id="nextBtn">Next</button>
+    </div>
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll('.card');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+
+    function showCard(index) {
+      cards.forEach((card, i) => {
+        card.classList.toggle('active', i === index);
+      });
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      showCard(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % cards.length;
+      showCard(currentIndex);
+    });
+  </script>
+</body>
+</html>
